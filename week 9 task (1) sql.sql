@@ -1,0 +1,7 @@
+CREATE TABLE birthdays (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    month INTEGER NOT NULL,
+    day INTEGER NOT NULL
+);
+.quit
