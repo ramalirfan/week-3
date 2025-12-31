@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Trivia</title>
+</head>
+
+<body>
+
+    <h1>Trivia Game</h1>
+
+    <!-- Multiple Choice Question -->
+    <h2>Question 1:</h2>
+    <p>Which language is used for web pages?</p>
+
+    <button onclick="wrong()">C</button>
+    <button onclick="wrong()">Python</button>
+    <button onclick="correct()">HTML</button>
+    <button onclick="wrong()">Java</button>
+
+    <p id="result1"></p>
+
+    <hr>
+
+    <!-- Free Response Question -->
+    <h2>Question 2:</h2>
+    <p>What does CSS stand for?</p>
+
+    <input type="text" id="answer">
+    <button onclick="checkAnswer()">Check</button>
+
+    <p id="result2"></p>
+
+    <script>
+        function correct() {
+            document.getElementById("result1").innerHTML = "Correct!";
+        }
+
+        function wrong() {
+            document.getElementById("result1").innerHTML = "Wrong!";
+        }
+
+        function checkAnswer() {
+            let ans = document.getElementById("answer").value;
+
+            if (ans.toLowerCase() === "cascading style sheets") {
+                document.getElementById("result2").innerHTML = "Correct!";
+            } else {
+                document.getElementById("result2").innerHTML = "Wrong!";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
